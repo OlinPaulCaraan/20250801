@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Gift ❤</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #FFDBE9;
+      text-align: center;
+      padding: 2em;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .gif-container {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 10;
+    }
+
+    .gif-container img {
+      width: 180px;
+    }
+
+    .letter {
+      max-width: 700px;
+      margin: 3em auto;
+      text-align: justify;
+      background: white;
+      padding: 2em;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      line-height: 1.6em;
+      font-size: 1.1em;
+    }
+
+    .music-section {
+      margin-bottom: 2em;
+    }
+
+    .music-section p {
+      font-size: 1.1em;
+      margin-bottom: 0.5em;
+    }
+
+.photo-gallery img {
+  width: 220px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+
+    .photo-gallery img {
+      width: 150px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .photo-gallery img.middle {
+      margin-top: -20px;
+    }
+
+    .photo-gallery img.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .final-box {
+      max-width: 500px;
+      margin: 4em auto 2em;
+      background-color: white;
+      padding: 2em;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      font-size: 1.6em;
+      font-weight: bold;
+      color: #d64d7b;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+
+    .final-box.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Music prompt and player -->
+  <div class="music-section">
+    <p>🎵 Play this music habang nagbabasa! 🤗</p>
+    <audio controls autoplay loop>
+      <source src="music1.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <div class="gif-container">
+    <img src="you-waiting.gif" alt="You waiting">
+  </div>
+
+  <div class="letter">
+    <p><strong>My Beebee 🐝,</strong></p>
+    <p>Today’s a special day, and I just want to take a moment to remind you how much you mean to me. You’re not just my girlfriend. You’re my comfort, my motivation, and the sweetest part of my every day.</p>
+    <p>Una sa lahat, <strong>happy 1st monthsary</strong> sa atin! 🎉 Isang buwan na ang lumipas pero parang kahapon lang yung sa Jollibee. Parang teleserye na walang kontrabida. Well, except si “Pagod” at si “Traffic” na laging kontrabida sa daily life. Looking forward ako sa mas marami pang masayang memories at sa pagbuo ng mga pangarap natin. Hopefully kasama na yung unlimited samgy HAHAHAHA 😂 </p>
+    <p>Salamat sa lahat ng ginagawa mo para sa akin. Sa suporta at tiwala mo, lalo na noong mga panahong may pagkukulang ako. Nariyan ka pa rin 💗 at sobra akong nagpapasalamat sa'yo. Para kang WiFi. Hindi man kita lagi makita, pero ramdam ko kapag nawawala ka 😢.</p>
+    <p>Pero ngayon, hindi lang ako nagpapasalamat. Gusto rin kitang pasayahin 🤗. Kasi deserve mong i-celebrate, hindi lang bilang sinisinta ko kundi bilang taong sobrang mahalaga sa buhay ko. Yung mga simpleng lambing mo, yung pagtawa mo sa mga corny jokes ko 😂 (kahit minsan pang-otits na HAHAHA), at yung pag-aalala mo kahit hindi ko sinasabi na pagod ako. Lahat 'yon nagpapagaan ng araw ko 💖. Parang ikaw ang human version ng yakap at hot coffee sa malamig na gabi.</p>
+    <p>Hindi man ako perpekto pero ginagawa ko ang lahat para sa future natin. Slowly but surely. Hindi mabilis pero umaabot 💪. At kapag naabot ko na ang mga goals ko, gusto kong ikaw ang unang makaramdam ng lahat ng bunga ng 'yon 🌸. I-spoil kita hindi lang sa bagay kundi sa oras, effort, at pagmamahal. Syempre may kasamang unlimited yakap at fries 🍟💞.</p>
+    <p><strong>Happy Girlfriend Day</strong>, amore! You’re appreciated. You’re cherished. And most of all, you are deeply loved 💖. Minsan, mas mahal pa kita kaysa sa sarili ko. </p>
+    <p><strong>You are beautiful</strong> in every way, inside and out 🌷. <strong>You are the sweetest person</strong> I know because you're kind, strong, softhearted, and truly special. <strong>You deserve everything good</strong> in this world and I promise to do my part to give you that. Kasama na ang food delivery kapag tinamad ka magluto 😅.</p>
+    <p><strong>I love you. I love you. I love you.</strong> I will never get tired of saying it and I will never stop proving it 💞.</p>
+    <p><strong>Mahal na mahal kita! I love you so much!</strong> 💓💘💓 To infinity and beyond!</p>
+    <p><br>Always yours,<br> your poging boyfie,<br> <strong>Olin Paul "Your Mr.PLP" Caraan</strong></p>
+  </div>
+
+  <!-- 3 Animated Images -->
+  <div class="photo-gallery">
+    <img src="her1.png" alt="Her Pic 1" class="reveal">
+    <img src="her2.png" alt="Her Pic 2" class="reveal">
+    <img src="her3.png" alt="Her Pic 3" class="reveal">
+  </div>
+
+  <!-- Final boxed message -->
+  <div class="final-box reveal">
+    💖 Happy Girlfriend Day, Beebee! 🐝 <br>
+	I love you!
+  </div>
+
+  <script>
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealOnScroll = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealOnScroll.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    revealElements.forEach(el => revealOnScroll.observe(el));
+  </script>
+</body>
+</html>

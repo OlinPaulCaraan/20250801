@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome, My Beebee! 🐝</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: #FFDBE9;
+      overflow-x: hidden;
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .dialogue-box, #proceedSection {
+      background: white;
+      border-radius: 16px;
+      padding: 1.5em;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      max-width: 90%;
+      text-align: center;
+      font-size: 1.2em;
+      margin-bottom: 1em;
+    }
+
+    .bee-img {
+      width: 120px;
+      margin-top: 1em;
+      transition: transform 0.3s ease;
+    }
+
+    .bee-img.happy {
+      width: 180px;
+      transform: scale(1.1);
+    }
+
+    .button-group {
+      margin-top: 1em;
+    }
+
+    .button-group button {
+      margin: 0.5em;
+      padding: 0.7em 1.5em;
+      background: #f08080;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    #nextBtn {
+      display: inline-block;
+      margin-top: 1.2em;
+      padding: 0.6em 1.5em;
+      background-color: #8a2be2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    #nextBtn:hover {
+      background-color: #6a1bbd;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dialogue-box" id="beeDialogue">
+    <p>Hi, I'm Mr. PLP 2023's pet bee. Are you his girlfriend?</p>
+    <div class="button-group">
+      <button onclick="respondToBee()">Yes, it’s her queen! 👑</button>
+      <button onclick="respondToBee()">Obviously, I'm the prettiest girl so that’s me! 💅</button>
+    </div>
+  </div>
+
+  <div id="proceedSection" style="display: none;">
+    <p style="font-weight: bold; font-size: 1.2em;">You look breathtaking today! 💖<br><br>
+    I see why my master fell in love with you.<br><br>
+    Please go to him, he's waiting for you. 🐝</p>
+    <button id="nextBtn" onclick="location.href='page2.html'">Go to Him ❤</button>
+  </div>
+
+  <img src="bee-default.png" alt="bee" class="bee-img" id="beeImage">
+
+  <script>
+    function respondToBee() {
+      const beeImg = document.getElementById('beeImage');
+      beeImg.src = 'bee-happy.png';
+      beeImg.classList.add('happy');
+      document.getElementById('beeDialogue').style.display = 'none';
+      document.getElementById('proceedSection').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

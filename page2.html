@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>May gift para sa beauty queen ko!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #FFDBE9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2em;
+      position: relative;
+    }
+
+    .message-wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .peek-image {
+      width: 180px;
+      position: absolute;
+      top: -180px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+
+    .message-container {
+      position: relative;
+      max-width: 600px;
+      background: white;
+      padding: 3em 2em 2em 2em;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+	  font-size: 1.1em;
+      z-index: 1;
+    }
+
+    .gift-button {
+      margin-top: 2em;
+      padding: 1em 2em;
+      font-size: 1.2em;
+      background-color: #f08080;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .gift-button:hover {
+      background-color: #d86b6b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="message-wrapper">
+    <img src="peek-you.png" alt="You peeking" class="peek-image">
+
+    <div class="message-container">
+      <p>Hello, my honey beebee! 💖<br><br>
+      This is my simple gift for you, hope you like it! 🎁<br><br>
+      Just tap the button below. 😊</p>
+      <button class="gift-button" onclick="location.href='page3.html'">Open Gift! 🥰</button>
+    </div>
+  </div>
+
+</body>
+</html>
