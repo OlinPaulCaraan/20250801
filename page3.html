@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Gift ❤</title>
@@ -14,6 +14,11 @@
       padding: 2em;
       position: relative;
       overflow-x: hidden;
+    }
+
+    /* Fade out transition for overlay */
+    #start-overlay {
+      transition: opacity 0.8s ease;
     }
 
     .gif-container {
@@ -38,25 +43,6 @@
       line-height: 1.6em;
       font-size: 1.1em;
     }
-
-    .music-section {
-      margin-bottom: 2em;
-    }
-
-    .music-section p {
-      font-size: 1.1em;
-      margin-bottom: 0.5em;
-    }
-
-.photo-gallery img {
-  width: 220px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-}
-
 
     .photo-gallery img {
       width: 150px;
@@ -99,8 +85,42 @@
 </head>
 <body>
 
-
+  <!-- Romantic Start Button Overlay -->
+  <div id="start-overlay" style="
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: #FFDBE9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999;
+    font-family: 'Comic Sans MS', cursive;
+    text-align: center;
+    padding: 1em;
+  ">
+    <h2 style="font-size: 1.8em; color: #d64d7b; margin-bottom: 0.5em;">💖 Press the button below</h2>
+    <p style="font-size: 1.2em; color: #555; margin-bottom: 1.5em;">to start the surprise with music 🎶</p>
+    <button onclick="startExperience()" style="
+      background-color: #d64d7b;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 14px 28px;
+      font-size: 1.2em;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      💝 Start the Experience
+    </button>
   </div>
+
+  <!-- Audio -->
+  <audio id="bg-music" loop>
+    <source src="music1.mp3" type="audio/mpeg">
+  </audio>
 
   <div class="gif-container">
     <img src="you-waiting.gif" alt="You waiting">
@@ -120,26 +140,27 @@
     <p><br>Always yours,<br> your poging boyfie,<br> <strong>Olin Paul "Your Mr.PLP" Caraan</strong></p>
   </div>
 
-  <!-- 3 Animated Images -->
   <div class="photo-gallery">
     <img src="her1.png" alt="Her Pic 1" class="reveal">
     <img src="her2.png" alt="Her Pic 2" class="reveal">
     <img src="her3.png" alt="Her Pic 3" class="reveal">
   </div>
 
-  <!-- Final boxed message -->
   <div class="final-box reveal">
     💖 Happy Girlfriend Day, Beebee! 🐝 <br><br>
-	I love you! ❤️
+    I love you! ❤️
   </div>
 
-<audio autoplay loop style="display: none;">
-  <source src="music1.mp3" type="audio/mpeg">
-</audio>
-
-
-
   <script>
+    function startExperience() {
+      const audio = document.getElementById('bg-music');
+      audio.play().catch(e => console.log("Autoplay failed:", e));
+      document.getElementById('start-overlay').style.opacity = '0';
+      setTimeout(() => {
+        document.getElementById('start-overlay').style.display = 'none';
+      }, 800);
+    }
+
     const revealElements = document.querySelectorAll('.reveal');
 
     const revealOnScroll = new IntersectionObserver(entries => {
@@ -153,5 +174,6 @@
 
     revealElements.forEach(el => revealOnScroll.observe(el));
   </script>
+
 </body>
 </html>
